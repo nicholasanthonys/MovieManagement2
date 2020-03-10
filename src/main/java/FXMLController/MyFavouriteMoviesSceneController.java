@@ -57,7 +57,6 @@ public class MyFavouriteMoviesSceneController implements Initializable {
         Label selectedItem = listView.getSelectionModel().getSelectedItem();
         int index = listView.getSelectionModel().getSelectedIndex();
         
-     
         List<Movie> arrFavMovie = person.getMovieList();
         System.out.println("index : " + index);
         arrFavMovie.remove(index);
