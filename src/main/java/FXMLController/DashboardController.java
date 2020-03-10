@@ -25,9 +25,8 @@ import javafx.scene.image.ImageView;
 import javax.swing.JOptionPane;
 
 /**
- * FXML Controller class
- *
- * @author ASUS
+ *FXML CONTROLLER CLASS
+ * @author NICHOLAS ANTHONY SUHARTONO 1118049
  */
 public class DashboardController implements Initializable {
 

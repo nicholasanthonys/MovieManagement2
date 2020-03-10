@@ -10,7 +10,7 @@ import javax.persistence.Persistence;
 
 /**
  *
- * @author ASUS
+ * @author NICHOLAS ANTHONY SUHARTONO 1118049
  */
 public class MovieManagementUtil {
     private static final EntityManagerFactory emf;

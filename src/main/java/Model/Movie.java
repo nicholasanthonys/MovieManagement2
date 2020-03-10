@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author ASUS
+ * @author NICHOLAS ANTHONY SUHARTONO 1118049
  */
 @Entity
 @Table(name = "movie")

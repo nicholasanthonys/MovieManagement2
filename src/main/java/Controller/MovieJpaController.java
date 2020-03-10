@@ -21,7 +21,7 @@ import javax.persistence.EntityManagerFactory;
 
 /**
  *
- * @author ASUS
+ * @author NICHOLAS ANTHONY SUHARTONO 1118049
  */
 public class MovieJpaController implements Serializable {
 

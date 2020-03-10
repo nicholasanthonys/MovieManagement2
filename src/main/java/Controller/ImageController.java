@@ -15,7 +15,7 @@ import javax.imageio.ImageIO;
 
 /**
  *
- * @author ASUS
+ * @author NICHOLAS ANTHONY SUHARTONO 1118049
  */
 public class ImageController {
 

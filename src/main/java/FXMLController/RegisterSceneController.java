@@ -12,6 +12,11 @@ import javafx.fxml.Initializable;
 import javax.swing.JOptionPane;
 import org.mindrot.jbcrypt.BCrypt;
 
+/**
+ *
+ * @author NICHOLAS ANTHONY SUHARTONO 1118049
+ */
+
 public class RegisterSceneController implements Initializable {
 
     @FXML

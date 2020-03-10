@@ -20,7 +20,7 @@ import org.mindrot.jbcrypt.BCrypt;
 /**
  * FXML Controller class
  *
- * @author ASUS
+ * @author NICHOLAS ANTHONY SUHARTONO 1118049
  */
 public class LoginSceneController implements Initializable {
 

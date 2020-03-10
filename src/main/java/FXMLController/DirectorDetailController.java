@@ -27,7 +27,7 @@ import javafx.scene.image.ImageView;
 /**
  * FXML Controller class
  *
- * @author ASUS
+ * @author NICHOLAS ANTHONY SUHARTONO 1118049
  */
 public class DirectorDetailController implements Initializable {
 

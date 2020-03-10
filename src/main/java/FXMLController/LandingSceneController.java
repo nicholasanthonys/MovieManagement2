@@ -36,7 +36,7 @@ import javafx.fxml.Initializable;
 /**
  * FXML Controller class
  *
- * @author ASUS
+ * @author NICHOLAS ANTHONY SUHARTONO 1118049
  */
 
 
