@@ -53,12 +53,13 @@ public class MyFavouriteMoviesSceneController implements Initializable {
 
     @FXML
     private void onClickBtnRemove(ActionEvent event) throws Exception {
-        System.out.println("btn add to favourite clicked");
+        System.out.println("btn removeclicked");
         Label selectedItem = listView.getSelectionModel().getSelectedItem();
         int index = listView.getSelectionModel().getSelectedIndex();
-
-        Movie movieAdded = mc.findMovie(index);
+        
+     
         List<Movie> arrFavMovie = person.getMovieList();
+        System.out.println("index : " + index);
         arrFavMovie.remove(index);
         person.setMovieList(arrFavMovie);
         pc.edit(person);
