@@ -74,12 +74,16 @@ public class DashboardController implements Initializable {
     @FXML
     private void onClickAddToFavourite(ActionEvent event) throws Exception {
         System.out.println("btn add to favourite clicked");
+        
+        //get selected item as label
         Label selectedItem = listView.getSelectionModel().getSelectedItem();
+        //determine the index of selected label
         int index = listView.getSelectionModel().getSelectedIndex();
-
+        //movie is index + 1
         int movieId = index + 1;
-        //get movie;
+        //get selected movie;
         Movie movieSelected = mc.findMovie(movieId);
+        //get person favorite movie list
         List<Movie> arrFavMovie = person.getMovieList();
 
         //check if the selected movie in favourite movie
@@ -95,6 +99,7 @@ public class DashboardController implements Initializable {
         if (exist) {
             JOptionPane.showMessageDialog(null, "Movie Already in your Favourite List !");
         } else {
+            //if not exist then add to favorite movie list
             arrFavMovie.add(movieSelected);
             person.setMovieList(arrFavMovie);
             pc.edit(person);
