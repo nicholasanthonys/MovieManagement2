@@ -26,7 +26,7 @@ import javafx.scene.image.ImageView;
  * @author ASUS
  */
 public class ListDirectorSceneController implements Initializable {
-
+    //controller of director
     DirectorJpaController dc = new DirectorJpaController(Util.MovieManagementUtil.getEntityManagerFactory());
     static Director director;
     //Size Image Declaration
