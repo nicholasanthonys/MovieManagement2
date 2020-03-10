@@ -33,19 +33,24 @@ public class LoginSceneController implements Initializable {
     @FXML
     private void onClickBtnLogin(ActionEvent event) {
         PersonJpaController pc = new PersonJpaController(Util.MovieManagementUtil.getEntityManagerFactory());
-        boolean loginSucceed = false;
+        boolean loginSucceed = false; //this variable willd determine if you succeed in login or not
+        
+        //if username is not empty and password is not empty
         if (!tfUsername.getText().equals("") && !pfPassword.getText().equals("")) {
-            String hashedPassword = BCrypt.hashpw(pfPassword.getText(), BCrypt.gensalt());
+            //get the person based on username as primary key
             person = new Person();
             person = pc.findPerson(tfUsername.getText());
             
+            //if person is found
             if(person != null){
+                //compare the password
                 if(BCrypt.checkpw(pfPassword.getText(), person.getPassword())){
                     loginSucceed = true;
                            
                     new Panel( event, "Dashboard.fxml","Dashboard");
                 }
             }
+            
             
             if(!loginSucceed){
                 JOptionPane.showMessageDialog(null, "username or password is incorrect");
