@@ -1,6 +1,5 @@
 package FXMLController;
 
-
 import Controller.PersonJpaController;
 import Model.Person;
 import com.jfoenix.controls.JFXPasswordField;
@@ -24,22 +23,28 @@ public class RegisterSceneController implements Initializable {
 
     @FXML
     private void onClickBtnRegister(ActionEvent event) throws Exception {
-        System.out.println("You clicked Register button");
-
+        //person controller object
         PersonJpaController pc = new PersonJpaController(Util.MovieManagementUtil.getEntityManagerFactory());
-
+        
+        //if fullname, username, and password is not empty
         if (!tfFullname.getText().equals("") && !tfUsername.getText().equals("") && !pfPassword.getText().equals("")) {
+            //hash the password
             String hashedPassword = BCrypt.hashpw(pfPassword.getText(), BCrypt.gensalt());
+            //create person object
             Person person = new Person();
+            //set person full name
             person.setName(tfFullname.getText());
+            //set person username
             person.setUsername(tfUsername.getText());
+            //set person hashed password
             person.setPassword(hashedPassword);
+            //insert person to database
             pc.create(person);
             JOptionPane.showMessageDialog(null, "Register Succeed");
             System.out.println("jumlah data di table person : " + pc.getPersonCount());
-            new Panel(event,"LoginScene.fxml","Login Form");
+            new Panel(event, "LoginScene.fxml", "Login Form");
 
-        }else{
+        } else {
             JOptionPane.showMessageDialog(null, "Semua Field harus diisi !");
         }
     }
