@@ -64,13 +64,8 @@ public class LandingSceneController implements Initializable {
         new Panel(event, "LoginScene.fxml", "Login Form");
     }
 
-    @FXML
+    @FXML    //UNTUK INISIALISASI DATA
     private void onClickBtnInitData(ActionEvent event) throws IOException, Exception {
-
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
         try {
             initDirector();
             initMovie();
@@ -79,9 +74,16 @@ public class LandingSceneController implements Initializable {
         }
     }
 
+ 
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+
+    }
+
     private void initDirector() throws FileNotFoundException, IOException {
         //James Cameron
         Director d1 = new Director();
+        d1.setName("James Cameron");
         d1.setBirthdate("August 16, 1954 ");
         d1.setOccupation("Filmmaker, environmentalist, philanthropist");
         d1.setShortbio("James Francis Cameron is a Canadian filmmaker, artist, and environmentalist, who is best known for making science fiction and epic films for the Hollywood mainstream.");
@@ -96,6 +98,7 @@ public class LandingSceneController implements Initializable {
 
 //Michael bay
         Director d2 = new Director();
+        d2.setName("Michael Bay");
         d2.setBirthdate("February 17, 1965");
         d2.setOccupation("Film director, producer, camera operator, actor");
         d2.setShortbio("Michael Benjamin Bay is an American filmmaker known for directing and producing big-budget, high-concept action films characterized by fast cutting, stylistic visuals and extensive use of special effects, including frequent depictions of explosions.");
@@ -110,6 +113,7 @@ public class LandingSceneController implements Initializable {
 
 //        //sam raimi
         Director d3 = new Director();
+        d3.setName("Sam Raimi");
         d3.setBirthdate("October 23, 1959");
         d3.setOccupation("Director, producer, screenwriter, actor");
         d3.setShortbio("Samuel M. Raimi is an American filmmaker, actor, and producer, primarily known for creating the cult horror Evil Dead series, and directing the Spider-Man trilogy (2002–2007).");
@@ -124,6 +128,7 @@ public class LandingSceneController implements Initializable {
 
 //        //joe russo
         Director d4 = new Director();
+        d4.setName("Joe Russo");
         d4.setBirthdate("July 8, 1971");
         d4.setOccupation("Film directors, producers, screenwriters");
         d4.setShortbio("Joe Russo is a producer and director, known for Avengers: Endgame (2019), Avengers: Infinity War (2018) and Captain America: The Winter Soldier (2014).");
@@ -139,6 +144,7 @@ public class LandingSceneController implements Initializable {
 //        
 //        //anthony russo
         Director d5 = new Director();
+        d5.setName("Anthony Russo");
         d5.setBirthdate("February 3, 1970");
         d5.setOccupation("Film directors, producers, screenwriters");
         d5.setShortbio("Anthony Russo is a producer and director, known for Avengers: Endgame (2019), Avengers: Infinity War (2018) and Captain America: The Winter Soldier (2014).");
@@ -237,6 +243,16 @@ public class LandingSceneController implements Initializable {
         fileInputStream.read(picInBytes);
         fileInputStream.close();
         m4.setPoster(picInBytes);
+
+        //get Transformers director
+        director = dc.findDirector(2); //michael bay
+        //renew the array
+        arrdirectors = new ArrayList<>();
+        //add d1 to arraylist directors
+        arrdirectors.add(director);
+        //set director
+        m4.setDirectorList(arrdirectors);
+
         mc.create(m4);
 
         //Create movie Transformers: Revenge of the Fallen
@@ -251,7 +267,7 @@ public class LandingSceneController implements Initializable {
         fileInputStream.close();
         m5.setPoster(picInBytes);
 
-        //get Transformers director
+        //get Transformers Revenge of the fallen director
         director = dc.findDirector(2);
         //renew the array
         arrdirectors = new ArrayList<>();
@@ -279,11 +295,11 @@ public class LandingSceneController implements Initializable {
         arrdirectors = new ArrayList<>();
         //add d1 to arraylist directors
         arrdirectors.add(director);
-        
+
         director = dc.findDirector(5); //anthony russo
         //add director2 to array list
         arrdirectors.add(director);
-        
+
         //set director
         m6.setDirectorList(arrdirectors);
         mc.create(m6);
