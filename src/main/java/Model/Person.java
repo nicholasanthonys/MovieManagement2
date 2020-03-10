@@ -29,8 +29,8 @@ import javax.xml.bind.annotation.XmlTransient;
 @NamedQueries({
     @NamedQuery(name = "Person.findAll", query = "SELECT p FROM Person p")
     , @NamedQuery(name = "Person.findByUsername", query = "SELECT p FROM Person p WHERE p.username = :username")
-    , @NamedQuery(name = "Person.findByName", query = "SELECT p FROM Person p WHERE p.name = :name")
-    , @NamedQuery(name = "Person.findByPassword", query = "SELECT p FROM Person p WHERE p.password = :password")})
+    , @NamedQuery(name = "Person.findByPassword", query = "SELECT p FROM Person p WHERE p.password = :password")
+    , @NamedQuery(name = "Person.findByName", query = "SELECT p FROM Person p WHERE p.name = :name")})
 public class Person implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -39,11 +39,11 @@ public class Person implements Serializable {
     @Column(name = "username")
     private String username;
     @Basic(optional = false)
-    @Column(name = "name")
-    private String name;
-    @Basic(optional = false)
     @Column(name = "password")
     private String password;
+    @Basic(optional = false)
+    @Column(name = "name")
+    private String name;
     @ManyToMany(mappedBy = "personList", fetch = FetchType.EAGER)
     private List<Movie> movieList;
 
@@ -54,10 +54,10 @@ public class Person implements Serializable {
         this.username = username;
     }
 
-    public Person(String username, String name, String password) {
+    public Person(String username, String password, String name) {
         this.username = username;
-        this.name = name;
         this.password = password;
+        this.name = name;
     }
 
     public String getUsername() {
@@ -68,20 +68,20 @@ public class Person implements Serializable {
         this.username = username;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @XmlTransient
