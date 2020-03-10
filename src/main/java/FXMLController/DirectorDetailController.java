@@ -7,12 +7,9 @@ package FXMLController;
 
 import Controller.DirectorJpaController;
 import Controller.ImageController;
-import static FXMLController.MyFavouriteMoviesSceneController.person;
 import Model.Director;
 import Model.Movie;
 import com.jfoenix.controls.JFXButton;
-import javafx.scene.input.MouseEvent;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
@@ -26,7 +23,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javax.imageio.stream.FileImageInputStream;
 
 /**
  * FXML Controller class
