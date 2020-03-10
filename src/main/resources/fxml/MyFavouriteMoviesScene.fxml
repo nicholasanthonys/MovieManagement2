@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController.MyFavouriteMoviesSceneController">
+    <stylesheets>
+        <URL value="@/styles/myfavouritemoviesscene.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="lblUsername" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="21.0" prefHeight="37.0" prefWidth="121.0" style="-fx-background-color: #42a5f5; -fx-background-radius: 50;" text="Username" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXListView fx:id="listView" layoutX="14.0" layoutY="157.0" prefHeight="345.0" prefWidth="575.0" />
+      <Label layoutX="144.0" layoutY="65.0" text="Your Favourite Movies">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnRemove" layoutX="484.0" layoutY="20.0" onAction="#onClickBtnRemove" style="-fx-background-color: #ef5350; -fx-background-radius: 50; -fx-border-radius: 50;" text="Remove" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="144.0" layoutY="118.0" text="Click Remove button to remove movies from your favourite list" />
+      <JFXButton fx:id="btnBack" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="20.0" onAction="#onClickBtnBack" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #00695c; -fx-background-radius: 50;" text="&lt;- Back" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

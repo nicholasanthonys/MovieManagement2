@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="402.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController.RegisterSceneController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="114.0" layoutY="14.0" text="Register Form">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="85.0" text="Fullname">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="157.0" prefHeight="27.0" prefWidth="85.0" text="Username">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="236.0" text="Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="tfFullname" layoutX="148.0" layoutY="79.0" prefHeight="25.0" prefWidth="233.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="tfUsername" layoutX="148.0" layoutY="151.0" prefHeight="25.0" prefWidth="233.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField id="pfPassword" fx:id="pfPassword" layoutX="148.0" layoutY="230.0" prefHeight="25.0" prefWidth="233.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="btnRegister" buttonType="RAISED" layoutX="60.0" layoutY="293.0" onAction="#onClickBtnRegister" prefHeight="39.0" prefWidth="331.0" ripplerFill="#fc4d4d" style="-fx-background-color: red; -fx-background-radius: 50;" text="Register" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <Hyperlink fx:id="linkLogin" layoutX="237.0" layoutY="358.0" onAction="#onClickLinkLogin" text="Click here to Login" />
+      <Label layoutX="90.0" layoutY="361.0" text="Already Have an Account ?" />
+    </children>
+</AnchorPane>

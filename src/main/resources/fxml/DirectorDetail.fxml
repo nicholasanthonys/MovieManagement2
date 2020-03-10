@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="501.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController.DirectorDetailController">
+    <stylesheets>
+        <URL value="@/styles/directordetail.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="186.0" layoutY="14.0" text="Director Detail">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listView" layoutX="14.0" layoutY="286.0" prefHeight="209.0" prefWidth="573.0" />
+      <Label fx:id="lblDirectorName" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="78.0" prefHeight="35.0" prefWidth="230.0" style="-fx-background-color: #ffa726; -fx-background-radius: 50;" text="Director Name" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnBack" alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="21.0" onAction="#onClickBtnBack" style="-fx-background-color: #00e676; -fx-background-radius: 50;" text="&lt;- Back" textAlignment="JUSTIFY" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="ivDirector" fitHeight="188.0" fitWidth="172.0" layoutX="29.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="228.0" layoutY="123.0" text="BirthDate">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="228.0" layoutY="153.0" text="Occupation">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBirthDate" layoutX="313.0" layoutY="123.0" text="BirthDate Value">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOccupation" layoutX="313.0" layoutY="153.0" text="Occupation Value">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblShortBio" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="228.0" layoutY="186.0" lineSpacing="1.0" prefHeight="97.0" prefWidth="354.0" text="Short Bio" textOverrun="WORD_ELLIPSIS" wrapText="true" />
+   </children>
+</AnchorPane>

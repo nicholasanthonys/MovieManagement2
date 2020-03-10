@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="456.0" prefWidth="788.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController.DashboardController">
+    <stylesheets>
+        <URL value="@/styles/dashboard.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="lblUsername" alignment="CENTER" contentDisplay="CENTER" layoutX="320.0" layoutY="14.0" prefHeight="34.0" prefWidth="128.0" style="-fx-background-color: #42a5f5; -fx-background-radius: 50;" text="Username" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXListView fx:id="listView" layoutX="28.0" layoutY="145.0" prefHeight="311.0" prefWidth="723.0" style="-fx-background-color: grey;" />
+      <Label layoutX="225.0" layoutY="63.0" text="All Movies Available">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="315.0" layoutY="19.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnMyFavouriteMovies" layoutX="580.0" layoutY="10.0" onAction="#onClickBtnMyFavouriteMovies" style="-fx-background-color: #f9a825; -fx-background-radius: 50;" text="My Favourite Movies" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAddToFavourite" layoutX="21.0" layoutY="70.0" onAction="#onClickAddToFavourite" style="-fx-background-color: #76ff03; -fx-background-radius: 50;" text=" + Add To Favourite" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="176.0" layoutY="120.0" text="To add your favourite movie, just select from the table and click 'Add To Favourite'" />
+      <JFXButton fx:id="btnSeeDirector" layoutX="583.0" layoutY="63.0" onAction="#onClickBtnSeeDirector" prefHeight="39.0" prefWidth="179.0" style="-fx-background-color: #d81b60; -fx-background-radius: 50;" text="See Director" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnLogOut" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="20.0" onAction="#onClickBtnLogOut" prefHeight="39.0" prefWidth="154.0" style="-fx-background-color: #00695c; -fx-background-radius: 50;" text="LogOut" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
