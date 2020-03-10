@@ -42,7 +42,7 @@
          </font>
       </JFXButton>
       <Label layoutX="176.0" layoutY="120.0" text="To add your favourite movie, just select from the table and click 'Add To Favourite'" />
-      <JFXButton fx:id="btnSeeDirector" layoutX="583.0" layoutY="63.0" onAction="#onClickBtnSeeDirector" prefHeight="39.0" prefWidth="179.0" style="-fx-background-color: #d81b60; -fx-background-radius: 50;" text="See Director" textFill="WHITE">
+      <JFXButton fx:id="btnSeeDirector" layoutX="583.0" layoutY="63.0" onAction="#onClickBtnSeeDirector" prefHeight="39.0" prefWidth="179.0" style="-fx-background-color: #d81b60; -fx-background-radius: 50;" text="See All Director" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
