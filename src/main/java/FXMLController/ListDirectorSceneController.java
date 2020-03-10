@@ -7,14 +7,10 @@ package FXMLController;
 
 import Controller.DirectorJpaController;
 import Controller.ImageController;
-import Controller.MovieJpaController;
-import static FXMLController.DashboardController.person;
 import Model.Director;
-import Model.Movie;
 import com.jfoenix.controls.JFXButton;
 import java.io.FileInputStream;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
