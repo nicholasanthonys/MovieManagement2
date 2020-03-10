@@ -42,7 +42,7 @@ import javafx.fxml.Initializable;
 
 public class LandingSceneController implements Initializable {
 
-    String input;
+    String input; //source of images
     File file;
     byte[] picInBytes;
     FileInputStream fileInputStream;
