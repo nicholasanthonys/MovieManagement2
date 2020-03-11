@@ -5,22 +5,11 @@ package FXMLController;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import Contoller.exceptions.NonexistentEntityException;
 import Controller.DirectorJpaController;
 import Controller.MovieJpaController;
 import Controller.PersonJpaController;
 import Model.Director;
-
-
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import Model.Movie;
 import java.io.File;
 import java.io.FileInputStream;
