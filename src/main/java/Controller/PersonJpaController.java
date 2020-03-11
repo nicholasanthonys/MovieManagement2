@@ -111,17 +111,17 @@ public class PersonJpaController implements Serializable {
         }
     }
 
-    public void destroy(String id) throws NonexistentEntityException {
+    public void destroy(String username) throws NonexistentEntityException {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
             Person person;
             try {
-                person = em.getReference(Person.class, id);
+                person = em.getReference(Person.class, username);
                 person.getUsername();
             } catch (EntityNotFoundException enfe) {
-                throw new NonexistentEntityException("The person with id " + id + " no longer exists.", enfe);
+                throw new NonexistentEntityException("The person with id " + username + " no longer exists.", enfe);
             }
             List<Movie> movieList = person.getMovieList();
             for (Movie movieListMovie : movieList) {
