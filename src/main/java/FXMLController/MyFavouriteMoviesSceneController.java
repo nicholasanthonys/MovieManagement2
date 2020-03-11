@@ -101,7 +101,7 @@ public class MyFavouriteMoviesSceneController implements Initializable {
             }
             try {
                 //set label as movie name and director name
-                Label lbl = new Label(movie.getName() + "\n" + "Directors : " + directorName);
+                Label lbl = new Label(movie.getName() + "\nRelease Date :" + movie.getReleasedate() + "\n" + "Directors : " + directorName);
                 //output directory for the images from database
                 String output = "src/main/resources/outputimages/favmovies/" + movie.getId() + ".jpg";
                 //out put the image and resize it

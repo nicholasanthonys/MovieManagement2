@@ -127,6 +127,7 @@ public class DashboardController implements Initializable {
         for (int i = 0; i < mc.getMovieCount(); i++) {
             //Loping movie from datahabse and get it
             Movie movie = mc.findMovie(i + 1);
+           
             //get movie name
             String movieName = movie.getName();
             //declaration for director name
@@ -142,7 +143,7 @@ public class DashboardController implements Initializable {
             }
             try {
                 //set label as movie name and director name
-                Label lbl = new Label(movie.getName() + "\n" + "Directors : " + directorName);
+                Label lbl = new Label(movie.getName() + "\nRelease Date : " + movie.getReleasedate() + "\n" + "Directors : " + directorName);
                 //output directory for the images from database
                 String output = "src/main/resources/outputimages/movies/" + movie.getId() + ".jpg";  
                 //out put the image and resize it

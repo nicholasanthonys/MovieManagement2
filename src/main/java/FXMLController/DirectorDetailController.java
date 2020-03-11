@@ -101,7 +101,7 @@ public class DirectorDetailController implements Initializable {
             
             try {
                 //set label as movie name and director name
-                Label lbl = new Label(movie.getName());
+                Label lbl = new Label(movie.getName() + "\nRelease Date : " + movie.getReleasedate());
                 //output directory for the images from database
                 String output = "src/main/resources/outputimages/favmovies/" + movie.getId() + ".jpg";
                 //out put the image and resize it
