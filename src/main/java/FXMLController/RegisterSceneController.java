@@ -16,8 +16,9 @@ import org.mindrot.jbcrypt.BCrypt;
  *
  * @author NICHOLAS ANTHONY SUHARTONO 1118049
  */
-
 public class RegisterSceneController implements Initializable {
+
+    PersonJpaController pc = new PersonJpaController(Util.MovieManagementUtil.getEntityManagerFactory());
 
     @FXML
     private JFXTextField tfFullname;
@@ -29,8 +30,7 @@ public class RegisterSceneController implements Initializable {
     @FXML
     private void onClickBtnRegister(ActionEvent event) throws Exception {
         //person controller object
-        PersonJpaController pc = new PersonJpaController(Util.MovieManagementUtil.getEntityManagerFactory());
-        
+
         //if fullname, username, and password is not empty
         if (!tfFullname.getText().equals("") && !tfUsername.getText().equals("") && !pfPassword.getText().equals("")) {
             //hash the password

@@ -31,6 +31,11 @@ import javafx.scene.image.ImageView;
 public class MyFavouriteMoviesSceneController implements Initializable {
 
     static Person person;
+    PersonJpaController pc = new PersonJpaController(Util.MovieManagementUtil.getEntityManagerFactory());
+    MovieJpaController mc = new MovieJpaController(Util.MovieManagementUtil.getEntityManagerFactory());
+    //Size Image Declaration
+    int scaledWidth = 100;
+    int scaledHeight = 150;
 
     @FXML
     private Label lblUsername;
@@ -40,8 +45,6 @@ public class MyFavouriteMoviesSceneController implements Initializable {
 
     @FXML
     private JFXListView<Label> listView;
-
-    PersonJpaController pc = new PersonJpaController(Util.MovieManagementUtil.getEntityManagerFactory());
 
     @FXML
     private JFXButton btnBack;
@@ -69,12 +72,6 @@ public class MyFavouriteMoviesSceneController implements Initializable {
         new Panel(event, "MyFavouriteMoviesScene.fxml", "My Favourite Movies");
 
     }
-
-    //Size Image Declaration
-    int scaledWidth = 100;
-    int scaledHeight = 150;
-
-    MovieJpaController mc = new MovieJpaController(Util.MovieManagementUtil.getEntityManagerFactory());
 
     /**
      * Initializes the controller class.

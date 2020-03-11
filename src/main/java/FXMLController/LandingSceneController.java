@@ -5,12 +5,13 @@ package FXMLController;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import Contoller.exceptions.NonexistentEntityException;
 import Controller.DirectorJpaController;
 import Controller.MovieJpaController;
 import Controller.PersonJpaController;
 import Model.Director;
-;
-import Model.Movie;
+
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -77,7 +78,7 @@ public class LandingSceneController implements Initializable {
  
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+       
     }
 
     private void initDirector() throws FileNotFoundException, IOException {
