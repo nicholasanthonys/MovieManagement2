@@ -19,19 +19,17 @@ import javafx.stage.Stage;
  */
 public class Panel {
 
-    public static Stage stageLogin;
+    public static Stage stage;
 
     public Panel(ActionEvent event, String resource, String title) {
 
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/" + resource));
-
             Scene scene = new Scene(root);
-
-            stageLogin = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stageLogin.setScene(scene);
-            stageLogin.setTitle(title);
-            stageLogin.show();
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setTitle(title);
+            stage.show();
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }

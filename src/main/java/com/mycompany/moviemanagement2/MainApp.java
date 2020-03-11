@@ -20,7 +20,7 @@ public class MainApp extends Application {
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/landingscene.css");
-        
+        stage.setResizable(false);
         stage.setTitle("Index");
         stage.setScene(scene);
         stage.show();
