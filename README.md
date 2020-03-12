@@ -1,10 +1,11 @@
 # Movie Management
-#Tugas Movie Management untuk matkul Pemrograman berbasis Platform
+Tugas Movie Management untuk matkul Pemrograman berbasis Platform
 Menggunakan JavaFX  database PostgreSQL dengan JPA, dan konsep DAO
 
 Database : MovieManagementDB
 
-Tables : 
+Tables :
+
 CREATE TABLE PERSON (
     username VARCHAR NOT NULL,
     password VARCHAR NOT NULL,
